@@ -1,5 +1,5 @@
 package config;
-
+// porque no anda
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
