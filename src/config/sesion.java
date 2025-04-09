@@ -217,7 +217,7 @@ public final class sesion extends conexion {
     PreparedStatement ps = null;
     Connection con = getAbrirConexion();
     ResultSet rs = null;
-    String sql = "SELECT * FROM sys_usuario WHERE usuario = ? AND password = ?";
+    String sql = "SELECT * FROM spa_usuario WHERE usuario = ? AND contrasena = ?";
     
     try {
         // Verificar si el usuario y contraseña son "supervisor" y "123"
