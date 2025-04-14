@@ -5,7 +5,7 @@ import config.sesion;
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     sesion oSesion;
-    frmVenta oFrmVenta;
+    //frmVenta oFrmVenta;
     public frmMenuPrincipal() {
         initComponents();
     }
@@ -23,14 +23,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
             /*Acceso Completo*/
         }else if(nivel.equals("2")){
             //Cajero
-            sm_oCompra.setVisible(false);
             sm_oVenta.setVisible(false);
             sm_oCaja.setVisible(true);
             
             mRegistro.setVisible(false);
         }else if(nivel.equals("3")){
             //Ventas
-            sm_oCompra.setVisible(false);
             sm_oVenta.setVisible(true);
             sm_oCaja.setVisible(false);
         }
@@ -50,10 +48,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         txtUsuario = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         mRegistro = new javax.swing.JMenu();
-        sm_rProducto = new javax.swing.JMenuItem();
         sm_rCliente = new javax.swing.JMenuItem();
         mOperaciones = new javax.swing.JMenu();
-        sm_oCompra = new javax.swing.JMenuItem();
         sm_oVenta = new javax.swing.JMenuItem();
         sm_oCaja = new javax.swing.JMenuItem();
 
@@ -94,23 +90,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
 
         mRegistro.setText("Registro");
 
-        sm_rProducto.setText("Producto");
-        sm_rProducto.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sm_rProductoActionPerformed(evt);
-            }
-        });
-        mRegistro.add(sm_rProducto);
-
         sm_rCliente.setText("Cliente");
         mRegistro.add(sm_rCliente);
 
         jMenuBar1.add(mRegistro);
 
         mOperaciones.setText("Operaciones");
-
-        sm_oCompra.setText("Compra");
-        mOperaciones.add(sm_oCompra);
 
         sm_oVenta.setText("Venta");
         sm_oVenta.addActionListener(new java.awt.event.ActionListener() {
@@ -145,17 +130,13 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sm_rProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sm_rProductoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_sm_rProductoActionPerformed
-
     private void sm_oVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sm_oVentaActionPerformed
-        if(oFrmVenta == null || oFrmVenta.isVisible() == false){
+        /*if(oFrmVenta == null || oFrmVenta.isVisible() == false){
             oFrmVenta = new frmVenta(oSesion);
             contenedor.add(oFrmVenta);
             oFrmVenta.setVisible(true);
             oFrmVenta.toFront();
-        }
+        }*/
     }//GEN-LAST:event_sm_oVentaActionPerformed
 
     /**
@@ -201,10 +182,8 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenu mOperaciones;
     private javax.swing.JMenu mRegistro;
     private javax.swing.JMenuItem sm_oCaja;
-    private javax.swing.JMenuItem sm_oCompra;
     private javax.swing.JMenuItem sm_oVenta;
     private javax.swing.JMenuItem sm_rCliente;
-    private javax.swing.JMenuItem sm_rProducto;
     private javax.swing.JLabel txtUsuario;
     // End of variables declaration//GEN-END:variables
 }

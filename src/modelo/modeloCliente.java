@@ -2,8 +2,8 @@ package modelo;
 
 public class modeloCliente {
     private int estado , id;
-    private String razon_social, documento_nro,telefono,direccion;
-    
+    private String nombre, documento_nro,telefono,direccion, correo;
+
     public int getEstado() {
         return estado;
     }
@@ -20,12 +20,12 @@ public class modeloCliente {
         this.id = id;
     }
 
-    public String getRazon_social() {
-        return razon_social;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setRazon_social(String razon_social) {
-        this.razon_social = razon_social;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public String getDocumento_nro() {
@@ -51,4 +51,14 @@ public class modeloCliente {
     public void setDireccion(String direccion) {
         this.direccion = direccion;
     }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    
 }

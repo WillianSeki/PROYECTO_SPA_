@@ -30,7 +30,7 @@ public class abmCliente extends conexion{
             if (resultado.next() == true) {
                 //se carga en el modelo los datos obtenidos de la db-----------------------------------
                 pModelo.setId(resultado.getInt("id"));
-                pModelo.setRazon_social(resultado.getString("razon_social"));
+                pModelo.setNombre(resultado.getString("nombre"));
                 pModelo.setDireccion(resultado.getString("direccion"));
                 conex.close();
                 return true;
