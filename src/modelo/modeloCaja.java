@@ -1,9 +1,9 @@
 package modelo;
 
 public class modeloCaja {
-    int id_caja, gs, factura_nro, id_servicio_cf, id_venta_cf, id_gasto_cf, id_funcionario_cf;
-    float sub_total, descuento, total_neto;
-    String fecha, servicio, tarjeta_credito, estado;
+    private int id_caja, gs, factura_nro, id_servicio_cf, id_venta_cf, id_gasto_cf, id_funcionario_cf;
+    private float sub_total, descuento, total_neto;
+    private String fecha, servicio, tarjeta_credito, estado;
 
     public int getId_caja() {
         return id_caja;

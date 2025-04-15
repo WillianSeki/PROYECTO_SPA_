@@ -7,32 +7,32 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import javax.swing.JOptionPane;
-import modelo.modeloCliente;
+import modelo.modeloCuentas;
 
-public class abmCliente extends conexion{
-        sesion oSesion;
-    public abmCliente(sesion pSesion){
+public class abmCuentas extends conexion{
+    sesion oSesion;
+    public abmCuentas(sesion pSesion){
         oSesion = pSesion;
     }
     
-    public boolean cargarRegistro(modeloCliente pModelo){
+    public boolean cargarCuentas(modeloCuentas pModelo){
         PreparedStatement preparaConsulta = null;
         Connection conex = getAbrirConexion();
         String sql = "";
         ResultSet resultado = null;
+        
+            try {
+                sql = "select * from cuentas";
+                preparaConsulta = conex.prepareStatement(sql);
+                preparaConsulta.setInt(1, pModelo.getId_cuentas());
+                resultado = preparaConsulta.executeQuery();
 
-        try {
-            sql = "select * from cliente where id_cliente = ? ";
-            preparaConsulta = conex.prepareStatement(sql);
-            preparaConsulta.setInt(1, pModelo.getId());
-            resultado = preparaConsulta.executeQuery();
-
-            if (resultado.next() == true) {
+            if (resultado.next() == false) {
                 //se carga en el modelo los datos obtenidos de la db-----------------------------------
-                pModelo.setId(resultado.getInt("id_cliente"));
-                pModelo.setNombre(resultado.getString("nombre"));
-                pModelo.setDireccion(resultado.getString("direccion"));
-                conex.close();
+                sql = "INSERT INTO cuentas(descripcion) values(?)";
+                preparaConsulta = conex.prepareStatement(sql);
+                preparaConsulta.setString(1, pModelo.getDescripcion());
+                preparaConsulta.execute();
                 return true;
             } else {
                 return false;
@@ -43,5 +43,4 @@ public class abmCliente extends conexion{
             return false;
         }
     }
-    
 }
