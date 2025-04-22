@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 public class conexion {
     private String db = "spa";
     private String usuario = "root";
-    private String password = "1234";
+    private String password = "your_password";
     private String servidor = "localhost";
     private String puerto = "3306";
     private String url = "jdbc:mysql://" + servidor + ":" + puerto + "/" + db + "?characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC";
