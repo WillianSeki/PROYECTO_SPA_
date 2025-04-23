@@ -26,7 +26,7 @@ public class abmCaja extends conexion{
         SimpleDateFormat formatoFecha = new SimpleDateFormat("YYYY/MM/DD");
     String fechaFormateada = formatoFecha.format(fechaActual);
     
-    // Asignar al campo de texto
+    // Asignar al campo de texto hol
     //txtFecha.setText(fechaFormateada);
     }
     
