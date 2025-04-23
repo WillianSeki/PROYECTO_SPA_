@@ -41,7 +41,7 @@ public class frmLogin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setToolTipText("");
 
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));

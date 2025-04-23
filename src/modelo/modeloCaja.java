@@ -1,9 +1,9 @@
 package modelo;
 
 public class modeloCaja {
-    private int id_caja, gs, factura_nro, id_servicio_cf, id_venta_cf, id_gasto_cf, id_funcionario_cf;
+    private int id_caja, gs, id_servicio_cf, id_venta_cf, id_gasto_cf, id_funcionario_cf;
     private float sub_total, descuento, total_neto;
-    private String fecha, servicio, tarjeta_credito, estado;
+    private String fecha, servicio, tarjeta_credito, estado, factura_nro;
 
     public int getId_caja() {
         return id_caja;
@@ -21,13 +21,23 @@ public class modeloCaja {
         this.gs = gs;
     }
 
-    public int getFactura_nro() {
+    public int getId_funcionario_cf() {
+        return id_funcionario_cf;
+    }
+
+    public void setId_funcionario_cf(int id_funcionario_cf) {
+        this.id_funcionario_cf = id_funcionario_cf;
+    }
+
+    public String getFactura_nro() {
         return factura_nro;
     }
 
-    public void setFactura_nro(int factura_nro) {
+    public void setFactura_nro(String factura_nro) {
         this.factura_nro = factura_nro;
     }
+
+    
 
     public float getSub_total() {
         return sub_total;

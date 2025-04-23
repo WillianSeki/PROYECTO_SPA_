@@ -262,7 +262,7 @@ public final class sesion extends conexion {
     }
 }
     //funcion para aplicar formato o mascara a los numeros -> costo
-   /* public String formatoCosto(float costo) {
+   public String formatoCosto(float costo) {
         //decimal_Costo=2
         if (decimal_Costo == 0) {
             mascara = new DecimalFormat("###,##0", simbolo);
@@ -279,10 +279,10 @@ public final class sesion extends conexion {
         }
         
         return mascara.format(costo);
-    }*/
+    }
     
     //funcion para aplicar formato o mascara a los numeros -> precio
-   /* public String formatoPrecio(float precio){                        
+   public String formatoPrecio(float precio){                        
         
         if(decimal_Precio==0){
             mascara = new DecimalFormat("###,##0",simbolo);
@@ -298,9 +298,9 @@ public final class sesion extends conexion {
             mascara = new DecimalFormat("###,##0.00000",simbolo);
         }              
         return mascara.format(precio);                
-    }*/
+    }
     
-    /* public String formatoCantidad(float qty){                            
+    public String formatoCantidad(float qty){                            
         if(decimal_Cantidad==0){
             mascara = new DecimalFormat("###,##0",simbolo);
         }else if(decimal_Cantidad == 1){
@@ -315,7 +315,7 @@ public final class sesion extends conexion {
             mascara = new DecimalFormat("###,##0.00000",simbolo);
         }              
         return mascara.format(qty);                
-    }*/
+    }
      
      public boolean validarInt(String valor){
          try {
@@ -360,7 +360,7 @@ public final class sesion extends conexion {
        
     }
      
-     /*public float convertirFloat(String numero){
+     public float convertirFloat(String numero){
       
         DecimalFormat format = new DecimalFormat("###,##0.000", simbolo);
         
@@ -375,13 +375,13 @@ public final class sesion extends conexion {
         }
 
         return valor;
-     }*/
+     }
      
-     /*public String formatoValorEnGs(float precio) {
+     public String formatoValorEnGs(float precio) {
 
         mascara = new DecimalFormat("###,##0", simbolo);
         return mascara.format(precio);
-    }*/
+    }
      
     public boolean verificarEnter(java.awt.event.KeyEvent tecla){
         int codigoTecla = (int) tecla.getKeyChar();

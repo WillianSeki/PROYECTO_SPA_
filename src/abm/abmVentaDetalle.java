@@ -46,4 +46,5 @@ public class abmVentaDetalle extends conexion{
             return false;
         }
     }
+    
 }
