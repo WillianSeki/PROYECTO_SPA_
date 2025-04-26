@@ -5,7 +5,7 @@ import config.sesion;
 public class frmMenuPrincipal extends javax.swing.JFrame {
 
     sesion oSesion;
-    //frmVenta oFrmVenta;
+    JfrmVenta oJfrmVenta;
     public frmMenuPrincipal() {
         initComponents();
     }
@@ -131,12 +131,12 @@ public class frmMenuPrincipal extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void sm_oVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sm_oVentaActionPerformed
-        /*if(oFrmVenta == null || oFrmVenta.isVisible() == false){
-            oFrmVenta = new frmVenta(oSesion);
-            contenedor.add(oFrmVenta);
-            oFrmVenta.setVisible(true);
-            oFrmVenta.toFront();
-        }*/
+        if(oJfrmVenta == null || oJfrmVenta.isVisible() == false){
+            oJfrmVenta = new JfrmVenta(oSesion);
+            contenedor.add(oJfrmVenta);
+            oJfrmVenta.setVisible(true);
+            oJfrmVenta.toFront();
+        }
     }//GEN-LAST:event_sm_oVentaActionPerformed
 
     /**

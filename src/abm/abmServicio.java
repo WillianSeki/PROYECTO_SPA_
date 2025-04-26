@@ -25,7 +25,7 @@ public class abmServicio extends conexion{
                 //SQL PARA VERIFICAR SI HAY UNA FACTURA CON ESE NÚMERO
                 sql = "select * from servicio";
                 preparaConsulta = conex.prepareStatement(sql);
-                preparaConsulta.setInt(1, pModelo.getId_servicio());
+                //preparaConsulta.setInt(1, pModelo.getId_servicio());
                 resultado = preparaConsulta.executeQuery();
 
             if (resultado.next() == false) {

@@ -24,7 +24,7 @@ public class abmCuentas extends conexion{
             try {
                 sql = "select * from cuentas";
                 preparaConsulta = conex.prepareStatement(sql);
-                preparaConsulta.setInt(1, pModelo.getId_cuentas());
+                //preparaConsulta.setInt(1, pModelo.getId_cuentas());
                 resultado = preparaConsulta.executeQuery();
 
             if (resultado.next() == false) {

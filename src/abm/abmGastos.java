@@ -24,7 +24,7 @@ public class abmGastos extends conexion{
             try {
                 sql = "select * from gasto";
                 preparaConsulta = conex.prepareStatement(sql);
-                preparaConsulta.setInt(1, pModelo.getId_gasto());
+                //preparaConsulta.setInt(1, pModelo.getId_gasto());
                 resultado = preparaConsulta.executeQuery();
 
             if (resultado.next() == false) {
