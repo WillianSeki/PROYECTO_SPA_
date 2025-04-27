@@ -60,5 +60,8 @@ public class modeloReserva {
         this.usuario = usuario;
     }
     
+    public String toString() {
+        return usuario;
     
+    }
 }

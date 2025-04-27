@@ -43,6 +43,10 @@ public class modeloFuncionario {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+    public int getId_reserva() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
 }

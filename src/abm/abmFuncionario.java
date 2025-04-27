@@ -21,7 +21,13 @@ public class abmFuncionario extends conexion{
         String sql = "";
         ResultSet resultado = null;
         
-                    try {
+            try {
+                        
+            String sqlVerificar = "SELECT id_reserva FROM reserva WHERE id_reserva = ?";
+            preparaConsulta = conex.prepareStatement(sqlVerificar);
+            preparaConsulta.setInt(1, pModelo.getId_reserva());
+            resultado = preparaConsulta.executeQuery();
+            
                 //SQL PARA VERIFICAR SI HAY UNA FACTURA CON ESE NÚMERO
                 sql = "select * from funcionario";
                 preparaConsulta = conex.prepareStatement(sql);
